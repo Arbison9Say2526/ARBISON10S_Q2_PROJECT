@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICT 10 Q2 Portfolio | Meet the Creator</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;0,900;1,900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            background: linear-gradient(135deg, #120428 0%, #2a0845 50%, #4b134f 100%);
+            color: #ffffff;
+            font-family: 'Montserrat', sans-serif;
+            min-height: 100vh;
+        }
+
+        /* Navbar Styling (Matches index.html) */
+        .navbar-vice {
+            background: rgba(18, 4, 40, 0.92);
+            border-bottom: 3px solid #ff2a85;
+            box-shadow: 0 4px 20px rgba(255, 42, 133, 0.4);
+        }
+
+        .navbar-brand {
+            font-weight: 900;
+            font-style: italic;
+            letter-spacing: 2px;
+            background: linear-gradient(90deg, #ff2a85, #ff9a44, #00f0ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .nav-link {
+            color: #e0e0e0 !important;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+            transition: 0.3s;
+        }
+
+        .nav-link:hover, .nav-link.active {
+            color: #00f0ff !important;
+            text-shadow: 0 0 10px rgba(0, 240, 255, 0.8);
+        }
+
+        /* Dossier Card */
+        .dossier-card {
+            background: rgba(16, 10, 32, 0.9);
+            border: 2px solid #00f0ff;
+            border-radius: 16px;
+            box-shadow: 0 0 30px rgba(0, 240, 255, 0.25);
+            backdrop-filter: blur(12px);
+        }
+
+        .hero-title {
+            font-weight: 900;
+            font-style: italic;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #ff2a85;
+            text-shadow: 2px 2px 0px #00f0ff;
+        }
+
+        .mono-code {
+            font-family: 'Share Tech Mono', monospace;
+            letter-spacing: 1.5px;
+        }
+
+        /* Profile Picture Frame */
+        .mugshot-frame {
+            border: 3px solid #ff2a85;
+            box-shadow: 0 0 20px rgba(255, 42, 133, 0.5);
+            border-radius: 12px;
+            overflow: hidden;
+            background: #1a0b2e;
+            aspect-ratio: 1 / 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .mugshot-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Stat Boxes */
+        .stat-box {
+            background: rgba(255, 255, 255, 0.05);
+            border-left: 4px solid #00f0ff;
+            border-radius: 8px;
+            padding: 12px 16px;
+            height: 100%;
+        }
+
+        .stat-label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: #00f0ff;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .stat-value {
+            font-size: 1.05rem;
+            font-weight: 700;
+            margin-bottom: 0;
+        }
+
+        /* Custom Favorite Color Badges (Exact Requested Palette) */
+        .color-pill {
+            display: inline-block;
+            padding: 6px 14px;
+            border-radius: 6px;
+            font-weight: 800;
+            font-size: 0.85rem;
+            letter-spacing: 0.5px;
+            margin: 3px 4px 3px 0;
+        }
+
+        .swatch-midnight-navy {
+            background-color: #0A1128; /* Deep Midnight Navy */
+            color: #7FA4E8; /* Soft ice-blue text so midnight navy is readable on dark bg */
+            border: 1px solid #26408B;
+        }
+
+        .swatch-white {
+            background-color: #1c1c24;
+            color: #FFFFFF;
+            border: 1px solid #FFFFFF;
+        }
+
+        .swatch-black {
+            background-color: #050507;
+            color: #A0A0AB;
+            border: 1px solid #33333D;
+        }
+
+        .swatch-gold {
+            background-color: #1c1810;
+            color: #C5A059; /* Understated Champagne/Antique Gold */
+            border: 1px solid #C5A059;
+        }
+
+        /* Top 5 Artists List */
+        .artist-item {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 42, 133, 0.35);
+            border-radius: 8px;
+            padding: 8px 14px;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .artist-rank {
+            color: #ff2a85;
+            font-weight: 900;
+            margin-right: 10px;
+        }
+
+        .vice-quote {
+            border-left: 5px solid #ff2a85;
+            background: rgba(255, 42, 133, 0.12);
+        }
+    </style>
+</head>
+<body>
+
+<!-- NAVIGATION BAR (Matches index.html) -->
+<nav class="navbar navbar-expand-lg navbar-dark navbar-vice sticky-top mb-5">
+    <div class="container">
+        <a class="navbar-brand fs-4" href="index.html">ICT 10 // VICE ARCHIVE</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#viceNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="viceNav">
+            <div class="navbar-nav ms-auto">
+                <a class="nav-link" href="index.html">Home</a>
+                <a class="nav-link" href="seatwork1.html">Seatwork 1</a>
+                <a class="nav-link" href="skillstest.html">Skills Test</a>
+                <a class="nav-link" href="drill2.html">Drill 2</a>
+                <a class="nav-link active" href="creator.html">Meet the Creator</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- MAIN DOSSIER CONTAINER -->
+<div class="container pb-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-10">
+            <div class="dossier-card p-4 p-md-5">
+                
+                <!-- TOP HEADER -->
+                <div class="d-flex flex-wrap justify-content-between align-items-center border-bottom border-secondary pb-3 mb-4">
+                    <div>
+                        <span class="badge bg-danger fw-bold px-3 py-2 mb-2">LEONIDA CITIZEN REGISTRY // CLASSIFIED</span>
+                        <h1 class="hero-title mb-0">Meet the Creator</h1>
+                    </div>
+                    <div class="text-md-end mt-2 mt-md-0">
+                        <span class="text-info mono-code d-block small">STATUS: MOST WANTED</span>
+                        <span class="text-light opacity-75 mono-code small">SECTOR: GRADE 10 ICT</span>
+                    </div>
+                </div>
+
+                <!-- IDENTITY SECTION (PICTURE + CORE VITALS) -->
+                <div class="row g-4 align-items-center mb-4">
+                    <!-- PICTURE -->
+                    <div class="col-md-4">
+                        <div class="mugshot-frame">
+                            <!-- REPLACE 'your-photo.jpg' WITH YOUR ACTUAL IMAGE FILENAME -->
+                            <img src="mjarrestedlol.jpg" alt="Creator Photo" onerror="this.src='https://placehold.co/400x400/120428/00f0ff?text=ADD+YOUR+PHOTO'">
+                        </div>
+                    </div>
+
+                    <!-- NAME, BIRTHDAY, PASSPORT, PALETTE -->
+                    <div class="col-md-8">
+                        <div class="row g-3">
+                            <div class="col-12">
+                                <div class="stat-box">
+                                    <div class="stat-label">Full Name / Alias</div>
+                                    <p class="stat-value fs-4">Al-Makram B. Arbison Jr / MJ</p>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6">
+                                <div class="stat-box">
+                                    <div class="stat-label">Date of Birth</div>
+                                    <p class="stat-value">January 6, 2011</p>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6">
+                                <div class="stat-box" style="border-left-color: #ff2a85;">
+                                    <div class="stat-label" style="color: #ff2a85;">Passport No.</div>
+                                    <p class="stat-value mono-code">POimkidding</p>
+                                </div>
+                            </div>
+
+                            <!-- FAVORITE COLORS -->
+                            <div class="col-12">
+                                <div class="stat-box">
+                                    <div class="stat-label">Signature Color Palette</div>
+                                    <div class="mt-1">
+                                        <span class="color-pill swatch-midnight-navy">Midnight Navy Blue</span>
+                                        <span class="color-pill swatch-white">Pure White</span>
+                                        <span class="color-pill swatch-black">Obsidian Black</span>
+                                        <span class="color-pill swatch-gold">Understated Gold</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PERSONAL INTERESTS & FAVORITES GRID -->
+                <h4 class="text-uppercase fw-bold text-info mt-4 mb-3" style="letter-spacing: 1.5px;">Personal Intel &amp; Favorites</h4>
+                <div class="row g-3 mb-4">
+                    <div class="col-md-6">
+                        <div class="stat-box">
+                            <div class="stat-label">Favorite Philosopher</div>
+                            <p class="stat-value">Niccolo Machiavelli</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="stat-box">
+                            <div class="stat-label">Top 5 NBA Players</div>
+                            <p class="stat-value">LeBron James, Michael Jordan, Stephen Curry, Luka Doncic, Luol Deng</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="stat-box">
+                            <div class="stat-label">Top 5 F1 Drivers</div>
+                            <p class="stat-value">Lewis Hamilton, Michael Schumacher, Max Verstappen, Sebastian Vettel, Kimi Raikkonen </p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="stat-box">
+                            <div class="stat-label">Favorite Teacher</div>
+                            <p class="stat-value">Sir Ortiz [sir are these plus points HAHAHAHA]</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="stat-box">
+                            <div class="stat-label">Hobbies &amp; Interests</div>
+                            <p class="stat-value">Music, Basketball, Motorsport, Thinking</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="stat-box">
+                            <div class="stat-label">Future Ambition / Dream</div>
+                            <p class="stat-value">Public Servant / To help</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TOP 5 ARTISTS & QUOTE -->
+                <div class="row g-4 mt-1">
+                    <div class="col-md-6">
+                        <h5 class="text-uppercase fw-bold text-info mb-3" style="letter-spacing: 1px;">Vice City Radio // Top 10 Most Listened Artists</h5>
+                        <div class="artist-item"><span class="artist-rank">01</span> One Direction</div>
+                        <div class="artist-item"><span class="artist-rank">02</span> 5 Seconds of Summer</div>
+                        <div class="artist-item"><span class="artist-rank">03</span> Taylor Swift</div>
+                        <div class="artist-item"><span class="artist-rank">04</span> Ed Sheeran</div>
+                        <div class="artist-item"><span class="artist-rank">05</span> Avicii</div>
+                        <div class="artist-item"><span class="artist-rank">06</span> The Calling</div>
+                        <div class="artist-item"><span class="artist-rank">07</span> Lifehouse</div>
+                        <div class="artist-item"><span class="artist-rank">08</span> The Click Five</div>
+                        <div class="artist-item"><span class="artist-rank">09</span> Simple Plan</div>
+                        <div class="artist-item"><span class="artist-rank">10</span> Maroon 5</div>
+                    </div>
+
+                    <div class="col-md-6 d-flex flex-column justify-content-between">
+
+                        <blockquote class="blockquote p-3 rounded vice-quote mb-0">
+                            <div class="stat-label" style="color: #ff2a85;">"How would you describe yourself in 2 words?"</div>
+                            <p class="fst-italic mb-0 text-light">"Pragmatic Diplomat"</p>
+                        </blockquote>
+
+                        <blockquote class="blockquote p-3 rounded vice-quote mb-0">
+                            <div class="stat-label" style="color: #ff2a85;">Statement from VCPD</div>
+                            <p class="fst-italic mb-0 text-light">Lost cause. Machiavellianism led to bad decisions. Great music taste though.</p>
+                        </blockquote>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

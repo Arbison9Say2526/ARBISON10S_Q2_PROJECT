@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICT 10 Q2 Portfolio | Vice City Edition</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts for GTA VI Retro-Modern Vibe -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;0,900;1,900&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            background: linear-gradient(135deg, #120428 0%, #2a0845 50%, #4b134f 100%);
+            color: #ffffff;
+            font-family: 'Montserrat', sans-serif;
+            min-height: 100vh;
+        }
+
+        /* Navbar Styling */
+        .navbar-vice {
+            background: rgba(18, 4, 40, 0.92);
+            border-bottom: 3px solid #ff2a85;
+            box-shadow: 0 4px 20px rgba(255, 42, 133, 0.4);
+        }
+
+        .navbar-brand {
+            font-weight: 900;
+            font-style: italic;
+            letter-spacing: 2px;
+            background: linear-gradient(90deg, #ff2a85, #ff9a44, #00f0ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .nav-link {
+            color: #e0e0e0 !important;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+            transition: 0.3s;
+        }
+
+        .nav-link:hover, .nav-link.active {
+            color: #00f0ff !important;
+            text-shadow: 0 0 10px rgba(0, 240, 255, 0.8);
+        }
+
+        /* Hero Banner */
+        .hero-title {
+            font-weight: 900;
+            font-style: italic;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #ff2a85;
+            text-shadow: 3px 3px 0px #00f0ff;
+        }
+
+        /* Showcase Cards */
+        .vice-card {
+            background: rgba(20, 10, 40, 0.85);
+            border: 2px solid #00f0ff;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 240, 255, 0.2);
+            transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+            height: 100%;
+        }
+
+        .vice-card:hover {
+            transform: translateY(-6px);
+            border-color: #ff2a85;
+            box-shadow: 0 0 28px rgba(255, 42, 133, 0.6);
+        }
+
+        .card-heading {
+            font-weight: 900;
+            font-style: italic;
+            text-transform: uppercase;
+            color: #00f0ff;
+        }
+
+        /* Neon Gradient Buttons */
+        .btn-vice {
+            background: linear-gradient(90deg, #ff2a85, #ff7b00);
+            border: none;
+            color: #fff;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            transition: 0.2s;
+        }
+
+        .btn-vice:hover {
+            box-shadow: 0 0 18px rgba(255, 123, 0, 0.85);
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+<!-- =====================================================================
+     SIGNAL 1: NAVIGATION BAR LINKS
+     Replace the href="..." filenames below with your actual HTML filenames.
+     ===================================================================== -->
+<nav class="navbar navbar-expand-lg navbar-dark navbar-vice sticky-top mb-5">
+    <div class="container">
+        <a class="navbar-brand fs-4" href="index.html">ICT 10 // VICE ARCHIVE</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#viceNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="viceNav">
+            <div class="navbar-nav ms-auto">
+                <a class="nav-link active" href="index.html">Home</a>
+                <!-- PUT YOUR SEATWORK 1 FILENAME HERE -->
+                <a class="nav-link" href="seatwork1.html">Seatwork 1</a>
+                <!-- PUT YOUR SKILLS TEST FILENAME HERE -->
+                <a class="nav-link" href="skillstest.html">Skills Test</a>
+                <!-- PUT YOUR DRILL 2 / ACTIVITY 2 FILENAME HERE -->
+                <a class="nav-link" href="drill2.html">Drill 2</a>
+                <!-- PUT YOUR MEET THE CREATOR FILENAME HERE -->
+                <a class="nav-link" href="creator.html">Meet the Creator</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- HERO HEADER -->
+<div class="container text-center mb-5">
+    <span class="badge bg-info text-dark fw-bold px-3 py-2 mb-2">QUARTER 2 // PYSCRIPT PORTFOLIO</span>
+    <h1 class="display-4 hero-title">Welcome to My 2nd Quarter Activities Portfolio</h1>
+    <p class="lead text-light opacity-75 mx-auto" style="max-width: 650px;">
+        Select a mission file below to launch my Second Quarter ICT 10 Python &amp; PyScript web applications.
+    </p>
+</div>
+
+<!-- =====================================================================
+     SIGNAL 2: PROJECT SHOWCASE CARDS
+     Each card links directly to one of your completed webpages.
+     Update the href="..." inside each <a> tag to match your filenames!
+     ===================================================================== -->
+<div class="container pb-5">
+    <div class="row g-4">
+
+        <!-- CARD 1: SEATWORK 1 (NICKNAME ATLAS) -->
+        <div class="col-md-6">
+            <div class="card vice-card p-4 d-flex flex-column justify-content-between">
+                <div>
+                    <span class="badge bg-info text-dark fw-bold mb-2">SEATWORK 1</span>
+                    <h3 class="card-heading">Nickname Atlas</h3>
+                    <p class="text-light opacity-75">
+                        Decodes any entered name into a custom character trait breakdown using Python dictionaries.
+                    </p>
+                </div>
+                <!-- LINK YOUR SEATWORK 1 HTML FILE HERE -->
+                <a href="seatwork1.html" class="btn btn-vice w-100 mt-3">Launch Seatwork 1</a>
+            </div>
+        </div>
+
+        <!-- CARD 2: SKILLS TEST (ELEMENT CHECKER) -->
+        <div class="col-md-6">
+            <div class="card vice-card p-4 d-flex flex-column justify-content-between">
+                <div>
+                    <span class="badge bg-warning text-dark fw-bold mb-2">SKILLS TEST</span>
+                    <h3 class="card-heading">Element Checker</h3>
+                    <p class="text-light opacity-75">
+                        Periodic table scanner built with PyScript to identify chemical symbols and properties.
+                    </p>
+                </div>
+                <!-- LINK YOUR SKILLS TEST HTML FILE HERE -->
+                <a href="skillstest.html" class="btn btn-vice w-100 mt-3">Launch Skills Test</a>
+            </div>
+        </div>
+
+        <!-- CARD 3: DRILL 2 / PARTICIPATION ACTIVITY 2 (SCHOOL CLUB MEMBERS) -->
+        <div class="col-md-6">
+            <div class="card vice-card p-4 d-flex flex-column justify-content-between">
+                <div>
+                    <span class="badge bg-danger fw-bold mb-2">DRILL 2 // ACTIVITY 2</span>
+                    <h3 class="card-heading">School Club Members</h3>
+                    <p class="text-light opacity-75">
+                        Interactive faction directory displaying active student rosters across campus clubs.
+                    </p>
+                </div>
+                <!-- LINK YOUR DRILL 2 / CLUB MEMBERS HTML FILE HERE -->
+                <a href="drill2.html" class="btn btn-vice w-100 mt-3">Launch Club Directory</a>
+            </div>
+        </div>
+
+        <!-- CARD 4: PROJECT (MEET THE CREATOR) -->
+        <div class="col-md-6">
+            <div class="card vice-card p-4 d-flex flex-column justify-content-between">
+                <div>
+                    <span class="badge bg-primary fw-bold mb-2">Q2 PROJECT</span>
+                    <h3 class="card-heading">Meet the Creator</h3>
+                    <p class="text-light opacity-75">
+                        Developer dossier featuring my interests, hobbies, dreams, and favorite quote.
+                    </p>
+                </div>
+                <!-- LINK YOUR MEET THE CREATOR HTML FILE HERE -->
+                <a href="creator.html" class="btn btn-vice w-100 mt-3">Open Developer Dossier</a>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- Bootstrap JS Bundle (for mobile navbar toggle) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
